@@ -1,0 +1,16 @@
+{
+  "name": "netpulse-ai-monorepo",
+  "version": "1.0.0",
+  "description": "NetPulse AI: ISP & Wi-Fi Downtime Tracker & Network Advisory Assistant",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "npm run --prefix backend dev",
+    "client": "npm run --prefix frontend dev",
+    "build": "npm run --prefix backend build && npm run --prefix frontend build"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "author": "NetPulse AI Team",
+  "license": "MIT"
+}

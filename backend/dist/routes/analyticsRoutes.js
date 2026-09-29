@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const analyticsController_js_1 = require("../controllers/analyticsController.js");
+const authMiddleware_js_1 = require("../middleware/authMiddleware.js");
+const router = (0, express_1.Router)();
+router.use(authMiddleware_js_1.requireAuth);
+router.get('/uptime', analyticsController_js_1.getUptimeAnalytics);
+router.get('/live-status', analyticsController_js_1.getLiveNetworkStatus);
+exports.default = router;
